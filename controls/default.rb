@@ -8,7 +8,7 @@ end
 
 control 'pricing-service-health' do
   impact 1.0
-  title 'pricing service health endpoint'
+  title 'pricing db should be running'
   describe http('http://localhost:8080/health') do
     its('status') { should eq 200 }
   end
